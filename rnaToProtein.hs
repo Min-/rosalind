@@ -1,3 +1,8 @@
+{-#LANGUAGE OverloadedStrings#-}
+
+module RnaToProtein
+where
+
 translate [] = []
 translate rna = codon (take 3 rna) : translate (drop 3 rna)
 
